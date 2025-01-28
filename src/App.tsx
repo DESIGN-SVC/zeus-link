@@ -1,7 +1,12 @@
+import { Header, NavBar } from "./Components";
+
 function App() {
-  return (
-    <h1>Olá mundo</h1>
-  )
+    return (
+        <>
+            <Header />
+            <NavBar title="Ligações" description="Informações gerais da ligação"/>
+        </>
+    );
 }
 
-export default App
+export default App;
