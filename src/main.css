@@ -1,1 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import "tailwindcss";
+
+@theme {
+    --default-font-family: "Montserrat", serif;
+
+    --color-turquoise-50: #effefb;
+    --color-turquoise-100: #c8fff4;
+    --color-turquoise-200: #92fdea;
+    --color-turquoise-300: #53f5de;
+    --color-turquoise-400: #25e2cc;
+    --color-turquoise-500: #07c5b2;
+    --color-turquoise-600: #029f92;
+    --color-turquoise-700: #077e76;
+    --color-turquoise-800: #0b645f;
+    --color-turquoise-900: #0e534f;
+    --color-turquoise-950: #013231;
+
+    --color-big-stone-50: #f4f8fb;
+    --color-big-stone-100: #e8eff6;
+    --color-big-stone-200: #ccdfeb;
+    --color-big-stone-300: #a0c5d9;
+    --color-big-stone-400: #6da6c3;
+    --color-big-stone-500: #4a8aad;
+    --color-big-stone-600: #386f91;
+    --color-big-stone-700: #2e5976;
+    --color-big-stone-800: #2a4d62;
+    --color-big-stone-900: #274153;
+    --color-big-stone-950: #16242f;
+    
+    --color-loblolly-50: #f6f7f8;
+    --color-loblolly-100: #eaecef;
+    --color-loblolly-200: #dadfe3;
+    --color-loblolly-300: #c0c9d0;
+    --color-loblolly-400: #a1aeb9;
+    --color-loblolly-500: #8a98a7;
+    --color-loblolly-600: #798597;
+    --color-loblolly-700: #6c7789;
+    --color-loblolly-800: #5c6371;
+    --color-loblolly-900: #4c515c;
+    --color-loblolly-950: #31343a;
+
+    --color-iron-50: #f6f7f8;
+    --color-iron-100: #eaecef;
+    --color-iron-200: #dadee3;
+    --color-iron-300: #c0c8d0;
+    --color-iron-400: #a2acb8;
+    --color-iron-500: #8b95a6;
+    --color-iron-600: #7a8396;
+    --color-iron-700: #6d7488;
+    --color-iron-800: #5c6171;
+    --color-iron-900: #4c505c;
+    --color-iron-950: #31333a;
+    
+    
+    
+    
+    
+}
+@layer components {
+    .container {
+        width: 100vw;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
