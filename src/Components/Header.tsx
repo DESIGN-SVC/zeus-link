@@ -13,9 +13,9 @@ export const Header = () => {
                 <ZeusBrand className="text-turquoise-400" />
                 <div className="flex items-center gap-12">
                     <ConcentrixBrand />
-                    <ul className="flex items-center gap-3">
+                    <ul className="flex items-center gap-3 text-regent-gray-600">
                         <li>
-                            <UserCircle />
+                            <UserCircle width={32} height={32}/>
                         </li>
                         <li>
                             <Bell />
