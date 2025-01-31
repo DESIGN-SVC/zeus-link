@@ -1,37 +1,101 @@
-import { Carent } from "../Icons";
+import { useLocation } from "react-router-dom";
+import { Links } from ".";
+import {
+    AppWindows,
+    CardHolder,
+    ChatDots,
+    Files,
+    Gear,
+    Microphone,
+    NoteBook,
+    PhoneCall,
+    Receipt,
+    Squares,
+    ThreeStructure,
+    UserCircle,
+} from "../Icons";
 
-type NavBarPops = {
-    title: string;
-    description: string;
-};
+export const NavBar = () => {
+    const { pathname } = useLocation();
 
-export const NavBar = ({ description, title }: NavBarPops) => {
+    const getPath = pathname.toLocaleLowerCase()
+    console.log(pathname.toLocaleLowerCase())
+    const links = [
+        {
+            text: "Bibliotecas",
+            icon: <NoteBook />,
+            path: "/",
+        },
+        {
+            text: "Blocos",
+            icon: <Squares />,
+            path: "/",
+        },
+        {
+            text: "Clientes",
+            icon: <UserCircle width={20} height={20} />,
+            path: "/",
+        },
+        {
+            text: "Interações",
+            icon: <ThreeStructure />,
+            path: "/",
+        },
+        {
+            text: "Itens da biblioteca",
+            icon: <CardHolder />,
+            path: "/",
+        },
+        {
+            text: "Ligações",
+            icon: <PhoneCall />,
+            path: "/ligacoes",
+        },
+        {
+            text: "Ocorrências",
+            icon: <ChatDots />,
+            path: "/",
+        },
+        {
+            text: "Locutores",
+            icon: <Microphone />,
+            path: "/",
+        },
+        {
+            text: "Scripts",
+            icon: <Files />,
+            path: "/",
+        },
+        {
+            text: "Tickets",
+            icon: <Receipt />,
+            path: "/tickets",
+        },
+        {
+            text: "Relatórios",
+            icon: <AppWindows />,
+            path: "/",
+        },
+
+        {
+            text: "Configurações",
+            icon: <Gear />,
+            path: "/",
+        },
+    ] as const;
+
     return (
-        <nav className="w-full bg-big-stone-950">
-            <div className="container px-6 py-4 flex items-center justify-between gap-20">
-                <h6 className="text-gray-300">Menu principal</h6>
-                <div className="flex items-center justify-between pl-6 flex-1">
-                    <div className="flex items-center gap-3 justify-center">
-                        <h3 className="text-white font-semibold text-2xl">
-                            {title}
-                        </h3>
-                        <p className="text-loblolly-300">{description}</p>
-                    </div>
-                    <ul className="flex items-center gap-3">
-                        <li className="text-loblolly-300 flex gap-2.5">
-                            <span>Home</span>
-                        </li>
-                        <li className="text-loblolly-300 flex items-center gap-2.5">
-                        <Carent />
-                            <span>Ticket</span>
-                        </li>
-                        <li className="text-iron-200 flex items-center gap-2.5 font-semibold">
-                            <Carent />
-                            <span>Home</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav className="bg-black">
+            <ul className="py-4 px-3 flex flex-col">
+                {links.map(({ text, icon, path }) => (
+                    <li key={text}>
+                        <Links.Root to={path} active={path === getPath}>
+                            <Links.Icon>{icon}</Links.Icon>
+                            <Links.Text>{text}</Links.Text>
+                        </Links.Root>
+                    </li>
+                ))}
+            </ul>
         </nav>
     );
 };

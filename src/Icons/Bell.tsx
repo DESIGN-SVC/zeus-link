@@ -12,7 +12,7 @@ export function Bell({ ...props }: ComponentPropsWithoutRef<"svg">) {
         >
             <g
                 clipPath="url(#clip0_43_398)"
-                stroke="#8B96A6"
+                stroke="currentColor"
                 strokeWidth={1.5}
                 strokeLinecap="round"
                 strokeLinejoin="round"
