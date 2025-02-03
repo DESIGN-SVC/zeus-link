@@ -18,7 +18,7 @@ export function RootLayout() {
     }, [pathname]);
 
     return (
-        <div className="relative flex min-h-screen-d flex-col">
+        <div className="relative flex min-h-dvh flex-col">
             <Header />
             <SubHeader
                 title={pathname === "/ligacoes" ? "Ligações" : "Tickets"}
@@ -34,8 +34,8 @@ export function RootLayout() {
                 }
             />
             <Suspense fallback={<Loading />} />
-            <div className=" bg-[linear-gradient(90deg,rgba(0,0,0,1)_20%,rgba(255,255,255,1)_20%)] h-screen">
-                <div className="grid grid-cols-[222px_1fr] container">
+            <div className=" bg-[linear-gradient(90deg,rgba(0,0,0,1)_20%,rgba(255,255,255,1)_20%)] flex flex-1">
+                <div className="grid grid-cols-[222px_1fr] container flex-1">
                     <NavBar />
                     <Outlet />
                 </div>

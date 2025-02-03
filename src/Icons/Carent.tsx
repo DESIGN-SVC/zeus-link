@@ -12,7 +12,7 @@ export const Carent = ({ ...props }: ComponentPropsWithoutRef<"svg">) => (
         <g clipPath="url(#clip0_43_440)">
             <path
                 d="M4.5 2.25L8.25 6 4.5 9.75"
-                stroke="#8B96A6"
+                stroke="currentColor"
                 strokeWidth={1.5}
                 strokeLinecap="round"
                 strokeLinejoin="round"
