@@ -85,7 +85,7 @@ export const NavBar = () => {
     ] as const;
 
     return (
-        <nav className="bg-black">
+        <nav className="bg-black h-full">
             <ul className="py-4 px-3 flex flex-col">
                 {links.map(({ text, icon, path }) => (
                     <li key={text}>

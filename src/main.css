@@ -28,8 +28,7 @@
     --color-big-stone-900: #274153;
     --color-big-stone-950: #16242f;
     
-    --color-loblolly-50: #f6f7f8;
-    --color-loblolly-100: #eaecef;
+
     --color-loblolly-200: #dadfe3;
     --color-loblolly-300: #c0c9d0;
     --color-loblolly-400: #a1aeb9;
@@ -63,6 +62,32 @@
     --color-regent-gray-800: #5f6774;
     --color-regent-gray-900: #50565f;
     --color-regent-gray-950: #2f3337;
+    
+    --color-shuttle-gray-50: #f7f8f8;
+    --color-shuttle-gray-100: #edeef1;
+    --color-shuttle-gray-200: #d8dadf;
+    --color-shuttle-gray-300: #b6bac3;
+    --color-shuttle-gray-400: #8e95a2;
+    --color-shuttle-gray-500: #707787;
+    --color-shuttle-gray-600: #5c6271;
+    --color-shuttle-gray-700: #4a4e5a;
+    --color-shuttle-gray-800: #3f434d;
+    --color-shuttle-gray-900: #383a42;
+    --color-shuttle-gray-950: #25262c;
+
+    --color-picton-blue-50: #effbff;
+    --color-picton-blue-100: #def6ff;
+    --color-picton-blue-200: #b6efff;
+    --color-picton-blue-300: #75e6ff;
+    --color-picton-blue-400: #2cdaff;
+    --color-picton-blue-500: #00c0ef;
+    --color-picton-blue-600: #00a0d4;
+    --color-picton-blue-700: #007fab;
+    --color-picton-blue-800: #006895;
+    --color-picton-blue-900: #065974;
+    --color-picton-blue-950: #04384d;
+    
+    
     
     
     
