@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from "react";
 
-export const Carent = ({ ...props }: ComponentPropsWithoutRef<"svg">) => (
+export const Caret = ({ ...props }: ComponentPropsWithoutRef<"svg">) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width={12}

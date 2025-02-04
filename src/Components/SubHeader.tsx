@@ -1,5 +1,5 @@
 import { cx } from "cva";
-import { Carent } from "../Icons";
+import { Caret } from "../Icons";
 
 type SubHeaderProps = {
     title: string;
@@ -39,7 +39,7 @@ export const SubHeader = ({
                                     ])}
                                 >
                                     <span>{el}</span>
-                                    <Carent
+                                    <Caret
                                         className={
                                             breadcrumbs.length - 1 === index
                                                 ? "hidden"

@@ -4,7 +4,7 @@ import {
     ComponentPropsWithRef,
     forwardRef,
 } from "react";
-import { Carent } from "../Icons";
+import { Caret } from "../Icons";
 
 export const Root = ({
     className,
@@ -43,7 +43,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
                     classNameIcon,
                 ])}
             >
-                <Carent width={20} height={20} strokeWidth={1} />
+                <Caret width={20} height={20} strokeWidth={1} />
             </div>
         </fieldset>
     )
