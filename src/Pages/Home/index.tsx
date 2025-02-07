@@ -62,6 +62,7 @@ function Home() {
                                         blockDecision={blockDecision}
                                         requestDecision={requestDecision}
                                         onPlus={() => navigate("/tickets")}
+                                        onPlay={()=>console.log('click audio')}
                                     />
                                     <Card.Description>
                                         {description}
