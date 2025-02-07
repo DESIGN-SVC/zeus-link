@@ -35,7 +35,7 @@ export function RootLayout() {
             />
             <Suspense fallback={<Loading />} />
             <div className=" bg-[linear-gradient(90deg,rgba(0,0,0,1)_20%,rgba(255,255,255,1)_20%)] flex flex-1">
-                <div className="grid grid-cols-[222px_1fr] container flex-1">
+                <div className="grid grid-cols-[200px_1fr] flex-1 xl:container">
                     <NavBar />
                     <Outlet />
                 </div>
