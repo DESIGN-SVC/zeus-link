@@ -19,7 +19,7 @@ export const NavBar = () => {
     const { pathname } = useLocation();
 
     const getPath = pathname.toLocaleLowerCase()
-    console.log(pathname.toLocaleLowerCase())
+
     const links = [
         {
             text: "Bibliotecas",
@@ -85,7 +85,7 @@ export const NavBar = () => {
     ] as const;
 
     return (
-        <nav className="bg-black h-full">
+        <nav className="bg-black ">
             <ul className="py-4 px-3 flex flex-col">
                 {links.map(({ text, icon, path }) => (
                     <li key={text}>

@@ -26,7 +26,7 @@ export const Root = ({ onClose, isOpen, ...props }: RootProps) => {
         <div
             onClick={onClose}
             className={cx([
-                "fixed inset-0",
+                "fixed inset-0 z-50",
                 "bg-black/20",
                 "flex justify-center items-center",
             ])}
