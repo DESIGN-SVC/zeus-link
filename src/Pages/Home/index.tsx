@@ -8,10 +8,11 @@ import { Card } from "./Card";
 import { listDescriptionAudio } from "./listDescriptionAudio";
 import { useNavigate } from "react-router-dom";
 import { cx } from "cva";
-import { Audio } from "./Audio";
+import { ModalAudio } from "./ModalAudio";
 
 function Home() {
     const [isOpenModal, setIsOpenModal] = useState(false);
+    const [isOpenModalAudio, setIsOpenModalAudio] = useState(false);
     const navigate = useNavigate();
 
     const handleCloseModal = () => {
@@ -30,8 +31,8 @@ function Home() {
                     className={cx([
                         "px-6 flex flex-col gap-3 relative",
                         "after:h-full after:w-0.5 after:bg-iron-200 ",
-                        'after:absolute after:left-9.5 after:top-10',
-                        'overflow-hidden'
+                        "after:absolute after:left-9.5 after:top-10",
+                        "overflow-hidden",
                     ])}
                 >
                     {listDescriptionAudio.map(
@@ -62,7 +63,8 @@ function Home() {
                                         blockDecision={blockDecision}
                                         requestDecision={requestDecision}
                                         onPlus={() => navigate("/tickets")}
-                                        onPlay={()=>console.log('click audio')}
+                                        onPlay={()=>setIsOpenModalAudio(prev=> !prev)
+                                        }
                                     />
                                     <Card.Description>
                                         {description}
@@ -100,7 +102,11 @@ function Home() {
                     <FormServiceEvaluation onClose={handleCloseModal} />
                 </Modal.Content>
             </Modal.Root>
-            <Audio />
+            <Modal.Root isOpen={isOpenModalAudio} onClose={()=>setIsOpenModalAudio(prev=> !prev)}>
+                <Modal.Content className="!p-4 max-w-[750px]">
+                    <ModalAudio />
+                </Modal.Content>
+            </Modal.Root>
         </>
     );
 }
