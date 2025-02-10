@@ -35,12 +35,18 @@ export const Root = ({ onClose, isOpen, ...props }: RootProps) => {
     );
 };
 
-export const Content = ({ ...props }: ComponentPropsWithoutRef<"div">) => (
+export const Content = ({
+    className,
+    ...props
+}: ComponentPropsWithoutRef<"div">) => (
     <div
         onClick={(e) => e.stopPropagation()}
-        className={cx(["bg-white", "w-full max-w-5xl p-12",'overflow-y-auto'])}
+        className={cx([
+            "bg-white",
+            "w-full max-w-5xl p-12",
+            "overflow-y-auto",
+            className,
+        ])}
         {...props}
     />
 );
-
-
