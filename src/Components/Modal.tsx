@@ -6,7 +6,7 @@ type RootProps = {
     isOpen: boolean;
 } & ComponentPropsWithoutRef<"div">;
 
-export const Root = ({ onClose, isOpen, ...props }: RootProps) => {
+export const Root = ({ onClose, isOpen, className, ...props }: RootProps) => {
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === "Escape") onClose();
@@ -29,6 +29,7 @@ export const Root = ({ onClose, isOpen, ...props }: RootProps) => {
                 "fixed inset-0 z-50",
                 "bg-black/20",
                 "flex justify-center items-center",
+                className
             ])}
             {...props}
         />

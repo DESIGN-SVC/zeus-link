@@ -1,18 +1,23 @@
 import { cx } from "cva";
 
-export const InfAudio = () => {
+type InfoAudioProps = {
+    onClickAudio: () => void;
+};
+
+export const InfAudio = ({ onClickAudio }: InfoAudioProps) => {
     return (
         <article className={cx(["px-6 py-3", "flex flex-col gap-2.5"])}>
             <div className="flex justify-between">
-                <div
+                <button
                     className={cx([
                         "text-white font-bold",
                         "px-3 py-2 w-fit",
-                        "bg-[#0072B7] rounded-lg",
+                        "bg-[#0072B7] rounded-lg cursor-pointer",
                     ])}
+                    onClick={onClickAudio}
                 >
                     Tocar áudio
-                </div>
+                </button>
                 <ul className="flex items-center gap-3">
                     {["Mostrar tudo", "Básico", "Check points"].map((el) => (
                         <li
@@ -20,7 +25,7 @@ export const InfAudio = () => {
                             className={cx([
                                 "text-sm font-semibold text-regent-gray-600",
                                 "border-2 rounded-lg bg-iron-100",
-                                'px-3 py-1'
+                                "px-3 py-1",
                             ])}
                         >
                             {el}

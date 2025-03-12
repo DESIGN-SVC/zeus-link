@@ -24,9 +24,11 @@ function Home() {
 
     return (
         <>
-            <main className="bg-white pb-6">
+            <main className="bg-white pb-6 overflow-y-auto h-[calc(100vh_-144px)] scroll-smooth">
                 <Nav />
-                <InfAudio />
+                <InfAudio
+                    onClickAudio={() => setIsOpenModalAudio((prev) => !prev)}
+                />
                 <section
                     className={cx([
                         "px-6 flex flex-col gap-3 relative",
@@ -63,7 +65,8 @@ function Home() {
                                         blockDecision={blockDecision}
                                         requestDecision={requestDecision}
                                         onPlus={() => navigate("/tickets")}
-                                        onPlay={()=>setIsOpenModalAudio(prev=> !prev)
+                                        onPlay={() =>
+                                            setIsOpenModalAudio((prev) => !prev)
                                         }
                                     />
                                     <Card.Description>
@@ -102,9 +105,15 @@ function Home() {
                     <FormServiceEvaluation onClose={handleCloseModal} />
                 </Modal.Content>
             </Modal.Root>
-            <Modal.Root isOpen={isOpenModalAudio} onClose={()=>setIsOpenModalAudio(prev=> !prev)}>
-                <Modal.Content className="!p-4 max-w-[750px]">
-                    <ModalAudio />
+            <Modal.Root
+                className="bg-transparent"
+                isOpen={isOpenModalAudio}
+                onClose={() => setIsOpenModalAudio((prev) => !prev)}
+            >
+                <Modal.Content className="!p-4 max-w-[750px] mt-auto">
+                    <ModalAudio
+                        onClose={() => setIsOpenModalAudio((prev) => !prev)}
+                    />
                 </Modal.Content>
             </Modal.Root>
         </>

@@ -13,7 +13,7 @@ export const SubHeader = ({
     breadcrumbs,
 }: SubHeaderProps) => {
     return (
-        <div className="w-full bg-big-stone-950">
+        <div className="w-full bg-big-stone-950 ">
             <div className="container px-6 py-4 flex items-center justify-between gap-20">
                 <h6 className="text-gray-300">Menu principal</h6>
                 <div className="flex items-center justify-between pl-6 flex-1">

@@ -18,7 +18,7 @@ export function RootLayout() {
     }, [pathname]);
 
     return (
-        <div className="relative flex min-h-dvh flex-col">
+        <>
             <Header />
             <SubHeader
                 title={pathname === "/ligacoes" ? "Ligações" : "Tickets"}
@@ -34,14 +34,14 @@ export function RootLayout() {
                 }
             />
             <Suspense fallback={<Loading />} />
-            <div className=" bg-[linear-gradient(90deg,rgba(0,0,0,1)_20%,rgba(255,255,255,1)_20%)] flex flex-1">
-                <div className="grid grid-cols-[200px_1fr] flex-1 container">
+            <div className="bg-[linear-gradient(90deg,rgba(0,0,0,1)_20%,rgba(255,255,255,1)_20%)] flex flex-1">
+                <div className="grid grid-cols-[200px_1fr] container">
                     <NavBar />
                     <Outlet />
                 </div>
             </div>
             <ScrollRestoration />
-        </div>
+        </>
     );
 }
 
