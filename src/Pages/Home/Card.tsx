@@ -93,7 +93,7 @@ const Header = ({
                 )}
             </div>
             <div className="flex items-center gap-2 text-loblolly-600">
-                <button onClick={onPlay}>
+                <button onClick={onPlay} className="cursor-pointer">
                     <Play width={8} height={8} />
                 </button>
                 <button onClick={onPlus} className="cursor-pointer">

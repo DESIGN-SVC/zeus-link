@@ -34,7 +34,7 @@ export const ModalAudio = ({ onClose }: ModalAudioProps) => {
                     {isPlaying && <Pause color="#009CDF" />}
                     {!isPlaying && <Play color="#009CDF" />}
                 </button>
-                <div className="text-sm font-semibold text-loblolly-900">
+                <div className="text-sm font-semibold text-loblolly-900 w-[87px]">
                     <span>{convertTimeToMinutes(currentTime)}</span>/
                     <span>
                         {convertTimeToMinutes(

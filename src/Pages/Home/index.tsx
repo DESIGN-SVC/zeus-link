@@ -106,11 +106,16 @@ function Home() {
                 </Modal.Content>
             </Modal.Root>
             <Modal.Root
-                className="bg-transparent"
+                className="bg-transparent relative"
                 isOpen={isOpenModalAudio}
                 onClose={() => setIsOpenModalAudio((prev) => !prev)}
             >
-                <Modal.Content className="!p-4 max-w-[750px] mt-auto">
+                <Modal.Content
+                    className={cx([
+                        "!p-4 max-w-[750px] mt-auto",
+                        "!fixed left-1/2 bottom-0 -translate-x-1/2",
+                    ])}
+                >
                     <ModalAudio
                         onClose={() => setIsOpenModalAudio((prev) => !prev)}
                     />
